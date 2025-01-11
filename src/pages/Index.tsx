@@ -1,11 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import RepoHeader from "@/components/RepoHeader";
+import FileExplorer from "@/components/FileExplorer";
+import RepoSidebar from "@/components/RepoSidebar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <RepoHeader />
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+          <div className="md:col-span-2 space-y-4">
+            <FileExplorer />
+          </div>
+          <div className="md:col-span-1">
+            <RepoSidebar />
+          </div>
+        </div>
       </div>
     </div>
   );
